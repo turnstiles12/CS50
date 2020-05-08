@@ -2,9 +2,8 @@
 #include <cs50.h>
 
 int main(void){
-    int q = 8;
     int n = 1;
-    int x;
+    int x, t;
     do
     {
         x = get_int("Height: ");//input the height
@@ -12,7 +11,7 @@ int main(void){
     }
     while(x<1 || x>8);
     for(int i=0; i<x; i++){
-        for(int t=0; t<q; t++){// format the bricks centered
+        for( t=x-n; t>0; t--){// format the bricks centered, printed x-1 times
             printf(" ");
         }
         for(int j=0; j<n; j++){ //Left side
@@ -24,6 +23,6 @@ int main(void){
         }
         printf("\n"); //next line
         n++;
-        q--;
+    
     }
 }
