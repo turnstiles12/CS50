@@ -2,20 +2,28 @@
 #include <cs50.h>
 
 int main(void){
-    
+    int q = 8;
     int n = 1;
     int x;
     do
     {
-        x = get_int("Height: ");
+        x = get_int("Height: ");//input the height
         
     }
     while(x<1 || x>8);
     for(int i=0; i<x; i++){
-        for(int j=0; j<n; j++){
+        for(int t=0; t<q; t++){// format the bricks centered
+            printf(" ");
+        }
+        for(int j=0; j<n; j++){ //Left side
             printf("#");
-        }   
-        printf("  #\n");
+        }  
+        printf("  "); //Space in between
+        for(int y=0; y<n; y++){//Right side
+            printf("#");
+        }
+        printf("\n"); //next line
         n++;
+        q--;
     }
 }
