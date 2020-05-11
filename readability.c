@@ -58,7 +58,4 @@ int main(void)
     {
         printf("Grade %.0f\n", gradeLevel);
     }
-    printf("Words: %.0f\n", words);
-    printf("Letters %.0f\n", letters);
-    printf("Sentences: %.0f\n", sentences);
 }
