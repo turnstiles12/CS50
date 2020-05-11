@@ -18,13 +18,24 @@ int main(void)
         {
             letters++; //Add number of letters
         }
-        if(letterCheck !=0 && isalpha(text[i+1])==0)
+        if(letterCheck !=0 && isblank(text[i+1])) //words
         {
-            words++;
+          words++;
         }
-        if ((text[i])=='.' && isblank(text[i+1]))
+        if ((text[i]) =='.' && isalpha(text[i-1]))// sentences
         {
             sentences++;
+            words ++;
+        }
+        if ((text[i]) =='?' && isalpha(text[i-1]))
+        {
+            sentences++;
+            words++;
+        }
+        if ((text[i]) =='!' && isalpha(text[i-1]))
+        {
+            sentences++;
+            words++;
         }
     }
     float total = words/100;
@@ -41,13 +52,9 @@ int main(void)
     }
     else
     {
+        printf("Grade: %.0f\n", gradeLevel);
+    }
         printf("Letters: %.0f\n", letters);
         printf("Words: %.0f\n", words);
         printf("Sentences: %.0f\n", sentences);
-        printf("Grade: %.0f\n", gradeLevel);
-    }
 }
-
-
-
-
