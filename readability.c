@@ -20,7 +20,11 @@ int main(void)
         }
         if(letterCheck !=0 && isblank(text[i+1])) //words
         {
-          words++;
+            words++;
+        }
+        if(letterCheck !=0 && (text[i+1])==',')
+        {
+            words++;
         }
         if ((text[i]) =='.' && isalpha(text[i-1]))// sentences
         {
@@ -52,6 +56,9 @@ int main(void)
     }
     else
     {
-        printf("Grade: %.0f\n", gradeLevel);
+        printf("Grade %.0f\n", gradeLevel);
     }
+    printf("Words: %.0f\n", words);
+    printf("Letters %.0f\n", letters);
+    printf("Sentences: %.0f\n", sentences);
 }
