@@ -39,7 +39,7 @@ int main(void)
         leftovers+=product[q];
     }
     int digit = (int) sum + leftovers;//
-    if(digit%10==0) //If the last digit of that = 0
+    if(n>12 && digit%10==0) //If the last digit of that = 0
     {
         findCard(product[n-1], product[n-2]); //Find which card company it is
     }
